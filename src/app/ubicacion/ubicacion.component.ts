@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MapInfoWindow, MapMarker, GoogleMap } from '@angular/google-maps'
 
 @Component({
   selector: 'app-ubicacion',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ubicacion.component.css']
 })
 export class UbicacionComponent implements OnInit {
+  @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
 
   center: google.maps.LatLngLiteral;
 
