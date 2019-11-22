@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UbicacionComponent implements OnInit {
 
+  center: google.maps.LatLngLiteral;
+
   constructor() { }
 
   ngOnInit() {
+    navigator.geolocation.getCurrentPosition(position => {
+      this.center = {
+        lat: 37.417236,
+        lng: -6.004564,
+      }
+    })
   }
 
 }
