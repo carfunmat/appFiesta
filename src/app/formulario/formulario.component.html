@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Compra de Entrada</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Nombre</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Apellidos</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+        </div>
+
+
+        <hr class="mb-1">
+
+        <h4 class="mb-3">Modo de pago</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" required (click)="setradio('Credito')">
+            <label class="custom-control-label" for="credit">tarjeta de crédito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required (click)="setradio('Debito')">
+            <label class="custom-control-label" for="debit">tarjeta de débito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+        <div class="row" id="credito" *ngIf="isSelected('Credito')">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Titular de la Tarjeta</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+            <small class="text-muted">Nombre tal como aparece en la tarjeta</small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Número de Tarjeta de Crédito</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+          </div>
+        </div>
+        <div class="row" id="debito" *ngIf="isSelected('Debito')">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Titular de la Tarjeta</label>
+            <input type="text" class="form-control" id="cc-name1" placeholder="" required>
+            <small class="text-muted">Nombre tal como aparece en la tarjeta</small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Número de Tarjeta de Dédito</label>
+            <input type="text" class="form-control" id="cc-number1" placeholder="" required>
+          </div>
+        </div>
+        <div class="row" id="fecha">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">Fecha de caducidad</label>
+            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          </div>
+        </div>
+        <hr class="mb-1">
+
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Acepto las condiciones del servicio</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
