@@ -1,1 +1,4 @@
-
+.centrarCaja{
+  position :relative !important;
+  left: 15% !important;
+}
