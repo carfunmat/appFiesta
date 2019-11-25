@@ -28,7 +28,7 @@
 
         <hr class="mb-1">
 
-        <div ng-controller="Entradas">
+        <div>
           <table class="table table-dark">
             <thead>
             <tr>
@@ -40,44 +40,17 @@
             <tr>
               <td scope="row">Nombre de la fiesta</td>
               <td>Valor de la entrada</td>
-              <td>
-                <button type="button" (click)="removeEntrada(indice.indexOf('td'))">Eliminar Entrada</button>
-              </td>
             </tr>
             <tr>
               <th scope="row" colspan="1">Importe total</th>
               <td>Dinero total de la entrada</td>
             </tr>
-            <tr>
-            <ng-template let-entrada ngFor [ngForOf]="entrada">
-              <td *ngFor="let entrada of entradas">{{entrada.nombre}}</td>
-              <td *ngFor="let entrada of entradas">{{entrada.importe}}</td>
-            </ng-template>
-            </tr>
             </tbody>
           </table>
-          <button type="button" (click)="addEntrada()">Añadir Entrada</button>
         </div>
 
         <div>
           <h4 class="mb-3">Modo de pago</h4>
-          <div class="d-block my-3">
-            <div class="custom-control custom-radio">
-              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required
-                     (click)="setradio('Credito')">
-              <label class="custom-control-label" for="credit">tarjeta de crédito</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required
-                     (click)="setradio('Debito')">
-              <label class="custom-control-label" for="debit">tarjeta de débito</label>
-            </div>
-            <div class="custom-control custom-radio">
-              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required
-                     (click)="setradio('Paypal')">
-              <label class="custom-control-label" for="paypal">PayPal</label>
-            </div>
-          </div>
           <div class="row" id="credito" *ngIf="isSelected('Credito')">
             <div class="col-md-6 mb-3">
               <label for="cc-name">Titular de la Tarjeta</label>
@@ -133,9 +106,8 @@
 
         <hr class="mb-1">
 
-        <button type="button" class="btn btn-primary">Siguiente</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
       </form>
     </div>
   </div>
 </div>
-

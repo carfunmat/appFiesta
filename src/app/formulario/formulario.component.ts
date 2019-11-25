@@ -9,7 +9,10 @@ export class FormularioComponent implements OnInit {
 
   constructor() { }
   private selectedLink = 'Credito';
-
+  private entradas = [
+    {nombre: 'nombreFiesta', importe: '10'},
+  ];
+  private indice;
   ngOnInit() {
   }
 
@@ -27,4 +30,17 @@ export class FormularioComponent implements OnInit {
 
     return (this.selectedLink === name); // if current radio button is selected, return true, else return false
   }
+  addEntrada() {
+    let entrada;
+    entrada = {
+    nombre: 'nombreFiesta',
+    importe: 'importeFiesta',
+  };
+    this.entradas.push(entrada);
+  }
+  removeEntrada(indice) {
+  this.entradas.splice(indice, 1);
+  }
+
+
 }
