@@ -1,0 +1,57 @@
+body {
+  height: 100%;
+  background-color: black;
+}
+
+
+.fondo{
+  background-image: url(https://micasainn.com/wp-content/uploads/2016/06/IBIZA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.letras{
+  font-weight: 700;
+
+}
+
+.imgIzquierda{
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  cursor: pointer;
+}
+
+.imgDerecha{
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  cursor: pointer;
+}
+
+.imgIzquierda:hover{
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  box-shadow: 0px 0px 15px 15px #ec731e;
+  -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+.imgDerecha:hover{
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  box-shadow: 0px 0px 15px 15px #ec731e;
+  -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+.fondoColor{
+  background-color: black;
+}
+
+.logo{
+  background-color: black;
+  margin-top: 2%
+}
