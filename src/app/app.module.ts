@@ -1,26 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UbicacionComponent } from './ubicacion/ubicacion.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GaleriaComponent } from './galeria/galeria.component';
-import { IndexComponent } from './index/index.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+
+
+
+import {IndexComponent} from './index/index.component';
+import {PresentacionComponent} from './presentacion/presentacion.component';
+
+import {RouterModule} from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UbicacionComponent,
-    NavbarComponent,
-    GaleriaComponent,
-    IndexComponent
+    IndexComponent,
+    PresentacionComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'presentacion', component: PresentacionComponent},
+      {path: '', component: IndexComponent, pathMatch: 'full'}
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
