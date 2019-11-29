@@ -21,10 +21,10 @@ export class FiestaService {
     return this.firestore.collection('fiestas').add(fiesta);
   }
 
-  public getFiesta(documentId: string) {
+ /*  public getFiesta(documentId: string) {
     return this.firestore.collection('fiestas').doc(documentId).snapshotChanges().pipe(map(res => res.payload.val()));
 
-  }
+  } */
 
   public getAsistentes(documentId: string) {
     let fiestaDoc = this.firestore.collection<Fiesta>('fiestas').doc(documentId);
