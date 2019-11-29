@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FiestaService } from '../servicios/fiesta.service';
+import { Fiesta } from '../interfaces/fiesta';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fiestasService: FiestaService) { }
+
+fiestas: Fiesta[];
 
   ngOnInit() {
+    this.getFiestas();
   }
+
+getFiestas(){
+  
+}
 
 }
