@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Fiesta } from '../interfaces/fiesta';
 import { Asistente } from '../interfaces/asistente';
 
 @Injectable({
@@ -7,23 +7,24 @@ import { Asistente } from '../interfaces/asistente';
 })
 export class FiestaService {
 
-  constructor(private firestore: AngularFirestore) {
-   }
+fiesta: Fiesta;
 
-   public addAsistente(asistente: Asistente) {
-    return this.firestore.collection('asistentes').add(asistente);
+  constructor() { }
+
+  public addAsistente(asistente: Asistente) {   
+    this.fiesta.publico.push(asistente);
   }
 
-  public getAsistente(documentId: string) {
-    return this.firestore.collection('asistentes').doc(documentId).snapshotChanges();
+  public getAsistentes(){
+    return this.fiesta.publico;
   }
 
-  public getAsistentes() {
-    return this.firestore.collection('asistentes').snapshotChanges();
+  public getPublico(){
+    return this.fiesta.publico.length;
   }
 
-  public updateAsistentes(documentId: string, data: any) {
-    return this.firestore.collection('asistentes').doc(documentId).set(data);
-  }
+public getDescripcion(){
+  return this.fiesta.descripcion;
+}
 
 }
