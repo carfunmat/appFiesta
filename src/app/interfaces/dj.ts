@@ -1,5 +1,5 @@
 export interface Dj {
-    id: number;
+    nombre: string;
     img: string;
     descripcion: string;
 }

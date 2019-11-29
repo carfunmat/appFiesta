@@ -8,5 +8,5 @@ export interface Fiesta {
     fecha: number[];
     galeria: string[];
     publico: Asistente[];
-    ubicacion: number[];
+    ubicacion: string;
 }
