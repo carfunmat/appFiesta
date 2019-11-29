@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UbicacionComponent,
-    NavbarComponent
+    NavbarComponent,
+    FormularioComponent,
+    ConfirmacionComponent
   ],
   imports: [
     BrowserModule,
