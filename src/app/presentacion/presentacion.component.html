@@ -2,35 +2,44 @@
 <html lang="es" style="background-color: white">
 
 <body>
-<app-menu></app-menu>
-<br>
+  <app-menu></app-menu>
+  <br>
 
-<div class="text-center align-content-center fondo">
-  <img src="../../assets/IMG/reggaeton.jpg" class="imgIzquierda2" height="700" width="550"/>
+  <div *ngIf="fiesta">
+      <div class="text-center align-content-center fondo">
+          <img src="{{fiesta.img}}" class="imgIzquierda2" height="700" width="550" />
+    
+        </div>
 
-</div>
+        <p class="float-left parrafo">{{fiesta.descripcion}}</p>
+   
+    <!--
+    <div class="text-center align-content-center fondo">
+      <img src="../../assets/IMG/reggaeton.jpg" class="imgIzquierda2" height="700" width="550" />
+
+    </div>
 
 
-<p class=" float-left parrafo"> R.B.F es por mérito propio, el mejor Urban Beach Festival de Europa. Y como no podía ser
-  de otra forma la edición de este año promete ser la más espectacular de todas ampliando el festival a dos días, con
-  nuevas y mejoradas zonas de sombras, nueva zona de duchas, más aspersores de agua vaporizada, WaterPark Zone, Piscinas
-  Hinchables, Padel Surf, Wakeboard, más horas de la mejor música latina con BOMBAZOS INTERNACIONALES, nuestra
-  inmejorable situación en primera línea de playa, donde como ya sabes, además de los conciertos, podrás disfrutar de
-  todo tipo de actividades musico-culturales, gastronómicas y deportivas. Masterclass de Zumba, Clases de bailes
-  latinos, Talleres, Tiendas y aún más sorpresas te esperan en esta nueva edición que os prometemos será aún más salvaje
-  que la pasada...
+    <p class=" float-left parrafo"> R.B.F es por mérito propio, el mejor Urban Beach Festival de Europa. Y como no podía
+      ser
+      de otra forma la edición de este año promete ser la más espectacular de todas ampliando el festival a dos días,
+      con
+      nuevas y mejoradas zonas de sombras, nueva zona de duchas, más aspersores de agua vaporizada, WaterPark Zone,
+      Piscinas
+      Hinchables, Padel Surf, Wakeboard, más horas de la mejor música latina con BOMBAZOS INTERNACIONALES, nuestra
+      inmejorable situación en primera línea de playa, donde como ya sabes, además de los conciertos, podrás disfrutar
+      de
+      todo tipo de actividades musico-culturales, gastronómicas y deportivas. Masterclass de Zumba, Clases de bailes
+      latinos, Talleres, Tiendas y aún más sorpresas te esperan en esta nueva edición que os prometemos será aún más
+      salvaje
+      que la pasada...
 
-  Los días 25 y 26 Julio 2020, disfrutaremos de nuevo de una jornada llena de emociones, con un cartel Internacional que
-  no permitirá que tu cuerpo pare ni un segundo. ¿Te atreves? ¡Ya estamos aquí! ¡Bienvenido al evento del verano!</p>
-
+      Los días 25 y 26 Julio 2020, disfrutaremos de nuevo de una jornada llena de emociones, con un cartel Internacional
+      que
+      no permitirá que tu cuerpo pare ni un segundo. ¿Te atreves? ¡Ya estamos aquí! ¡Bienvenido al evento del verano!
+    </p>
+-->
+  </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-

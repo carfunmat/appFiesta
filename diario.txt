@@ -8,3 +8,9 @@ Carlos: Población de datos en la BD
 29/11
 
 Intento de integración de los servicios en la aplicación
+
+2/12
+
+Carlos/José Joaquín: El servicio obtiene los datos de las fiestas de la BD y los presenta en pantalla
+José Joaquín: Servicios integrados en la presentación de la fiesta
+Raúl: 

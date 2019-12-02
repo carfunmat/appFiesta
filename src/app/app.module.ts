@@ -16,6 +16,7 @@ import {PresentacionComponent} from './presentacion/presentacion.component';
 
 import {RouterModule} from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -33,19 +34,20 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     
     RouterModule.forRoot([
-      {path: 'presentacion', component: PresentacionComponent},
+      {path: 'presentacion/:id', component: PresentacionComponent},
       {path: '', component: IndexComponent, pathMatch: 'full'}
 
     ]),
 
     //GoogleMapsModule,
-    AngularFireModule.initializeApp(environment, 'appFiesta'),
-    AngularFireDatabaseModule
+    
 
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule {

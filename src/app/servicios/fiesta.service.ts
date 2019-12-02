@@ -7,6 +7,7 @@ import { Asistente } from '../interfaces/asistente';
 })
 export class FiestaService {
 
+
 fiesta: Fiesta;
 
   constructor() { }
