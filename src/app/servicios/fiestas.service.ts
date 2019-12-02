@@ -12,7 +12,7 @@ export class FiestasService {
   constructor(private firestore: AngularFirestore) {
 
   }
-
+// Hola 
   public addFiesta(fiesta: Fiesta) {
     return this.firestore.collection('fiestas').add(fiesta);
   }
