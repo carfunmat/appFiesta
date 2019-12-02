@@ -9,4 +9,6 @@ export interface Fiesta {
     galeria: string[];
     publico: Asistente[];
     ubicacion: string;
+    img: string;
+    precio: number;
 }
