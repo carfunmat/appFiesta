@@ -13,4 +13,5 @@ Intento de integración de los servicios en la aplicación
 
 Carlos/José Joaquín: El servicio obtiene los datos de las fiestas de la BD y los presenta en pantalla
 José Joaquín: Servicios integrados en la presentación de la fiesta
+Carlos: Subidas más fiestas a la BD
 Raúl: 

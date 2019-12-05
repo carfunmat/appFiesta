@@ -44,7 +44,8 @@ export class FormularioComponent implements OnInit {
     celda3.insertAdjacentElement('beforeend', boton);
     // this.entradas.push({nombre: celda1.innerText, importe: celda2.innerText});
   }
-   upTo(el, tagName) {
+
+  upTo(el, tagName) {
     tagName = tagName.toLowerCase();
     while (el && el.parentNode) {
       el = el.parentNode;
@@ -56,9 +57,12 @@ export class FormularioComponent implements OnInit {
     console.log(el);
     return null;
   }
+
   deleteRow(el) {
     const row = this.upTo(el, 'tr')
     // tslint:disable-next-line:max-line-length
     if (row || document.getElementById('tabla').children.length === 3) { row.parentNode.removeChild(row); } else { alert('Lo siento pero no se puede borrar otra entrada(lo minimo es una)'); }
   }
+
+  
 }
