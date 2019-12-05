@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Asistente } from '../interfaces/asistente';
+import { CompraService } from '../servicios/compra.service';
+import { FiestasService } from '../servicios/fiestas.service';
+import { Fiesta } from '../interfaces/fiesta';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -7,12 +11,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-  constructor() {
+
+  asistente: Asistente;
+  fiesta: Fiesta;
+
+  constructor(private compraService: CompraService, private fiestasService: FiestasService, private route: ActivatedRoute, ) {
   }
 
   private selectedLink = 'Credito';
 
   ngOnInit() {
+    this.getFiesta();
+  }
+
+  
+  getFiesta() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.fiestasService.getFiesta(id)
+      .subscribe(fiesta => this.fiesta = fiesta.payload.data() as Fiesta);
   }
 
   setradio(e: string): void {
@@ -46,25 +62,26 @@ export class FormularioComponent implements OnInit {
     celda3.insertAdjacentElement('beforeend', boton);
     boton.addEventListener('click', this.deleteRow);
   }
-/*
-  upTo(el, tagName) {
-    tagName = tagName.toLowerCase();
-    while (el && el.parentNode) {
-      el = el.parentNode;
-      if (el.tagName && el.tagName.toLowerCase() === tagName) {
-        return el;
+  /*
+    upTo(el, tagName) {
+      tagName = tagName.toLowerCase();
+      while (el && el.parentNode) {
+        el = el.parentNode;
+        if (el.tagName && el.tagName.toLowerCase() === tagName) {
+          return el;
+        }
       }
+      return null;
     }
-    return null;
-  }
+  
+   deleteRow(el) {
+      const row = this.upTo(el, 'tr');
+      // tslint:disable-next-line:max-line-length
+      if (row) {
+        row.parentNode.removeChild(row);
+      }
+    }*/
 
- deleteRow(el) {
-    const row = this.upTo(el, 'tr');
-    // tslint:disable-next-line:max-line-length
-    if (row) {
-      row.parentNode.removeChild(row);
-    }
-  }*/
   deleteRow() {
     const tabla = document.getElementById('tabla') as HTMLTableElement;
     if (tabla.children.length > 3) {
@@ -74,4 +91,11 @@ export class FormularioComponent implements OnInit {
       alert('No se pueden borrar mas entradas (minimo una).');
     }
   }
+
+  comprarEntrada() {
+    this.compraService.comprarEntrada();
+
+
+  }
+
 }

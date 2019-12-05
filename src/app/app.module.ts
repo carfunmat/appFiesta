@@ -17,6 +17,7 @@ import {PresentacionComponent} from './presentacion/presentacion.component';
 import {RouterModule} from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: 'presentacion/:id', component: PresentacionComponent},
       {path: '', component: IndexComponent, pathMatch: 'full'}
