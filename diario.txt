@@ -1,0 +1,17 @@
+28/11
+
+Raúl: añadido botón para añadir entradas en formulario de compra
+Tomás: Creada presentación de fiesta individual y creado el css
+José Joaquín: Investigación de obtención de datos de firebase
+Carlos: Población de datos en la BD
+
+29/11
+
+Intento de integración de los servicios en la aplicación
+
+2/12
+
+Carlos/José Joaquín: El servicio obtiene los datos de las fiestas de la BD y los presenta en pantalla
+José Joaquín: Servicios integrados en la presentación de la fiesta
+Carlos: Subidas más fiestas a la BD
+Raúl: 

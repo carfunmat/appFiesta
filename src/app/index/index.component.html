@@ -1,0 +1,25 @@
+<body class="fondoColor">
+
+  <div class="container">
+    <img
+      src="../../assets/IMG/71908747-icône-de-couronne-de-laurier-argent-prix-du-symbole-trophée-victoire-gagnant-prix-branche-d-olivier-el.jpg"
+      class="rounded mx-auto d-block logo" height="200" width="200" />
+  </div>
+
+  <div *ngFor="let fiesta of fiestas" style="overflow: hidden;">
+    <div class="row">
+      <div class="col-8">
+        <a routerLink="presentacion/{{fiesta[0]}}">
+          <figure>
+            <img src="{{fiesta[1].img}}" class="rounded float-left imgIzquierda" height="450" width="360">
+          </figure>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</body>

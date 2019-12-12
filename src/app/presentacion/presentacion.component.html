@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es" style="background-color: white">
+
+<body>
+  <app-menu></app-menu>
+  <br>
+
+  <div *ngIf="fiesta" style="overflow: hidden;">
+    <div class="text-center align-content-center fondo row">
+      <img src="{{fiesta.img}}" class="imgIzquierda2" height="700" width="550" />
+      <p class="float-left parrafo">{{fiesta.descripcion}}</p>
+      <p class="float-left parrafo">{{fiesta.precio}} &euro;</p>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
