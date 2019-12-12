@@ -48,10 +48,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
       {path: '', component: IndexComponent, pathMatch: 'full'},
 
       // <!-- Ruta al formulario compra -->
-      {path: 'presentacion/RBF/formulario', component: FormularioComponent},
-      {path: 'presentacion/KP/formulario', component: FormularioComponent},
-      {path: 'presentacion/techno/formulario', component: FormularioComponent},
-      {path: 'presentacion/LIR/formulario', component: FormularioComponent}
+      {path: 'presentacion/:id/formulario', component: FormularioComponent},
+      {path: 'presentacion/:id/formulario', component: FormularioComponent},
+      {path: 'presentacion/:id/formulario', component: FormularioComponent},
+      {path: 'presentacion/:id/formulario', component: FormularioComponent}
 
       /* <!-- Ruta a los djs -->
       {path: 'presentacion/RBF/Djs', component: DjsComponent},

@@ -14,16 +14,18 @@ export class FormularioComponent implements OnInit {
 
   asistente: Asistente;
   fiesta: Fiesta;
+  totalEntrada: number;
 
   constructor(private compraService: CompraService, private fiestasService: FiestasService, private route: ActivatedRoute, ) {
   }
 
   private selectedLink = 'Credito';
+  
 
   ngOnInit() {
     this.getFiesta();
+ 
   }
-
   
   getFiesta() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -46,7 +48,7 @@ export class FormularioComponent implements OnInit {
     return (this.selectedLink === name);
   }
 
-  addEntrada() {
+  addEntrada() { 
     const tabla = document.getElementById('tabla') as HTMLTableElement;
     const boton = document.createElement('button');
     boton.type = 'button';
@@ -57,11 +59,14 @@ export class FormularioComponent implements OnInit {
     const celda1 = fila.insertCell(0);
     const celda2 = fila.insertCell(1);
     const celda3 = fila.insertCell(2);
-    celda1.innerHTML = 'nombreFiesta';
-    celda2.innerHTML = 'importeFiesta';
+    celda1.innerHTML = this.fiesta.nombre;
+    celda2.innerHTML = this.fiesta.precio.toString();
     celda3.insertAdjacentElement('beforeend', boton);
-    boton.addEventListener('click', this.deleteRow);
+    boton.addEventListener('click',this.deleteRow); 
+    this.totalEntrada += this.fiesta.precio;
   }
+
+
   /*
     upTo(el, tagName) {
       tagName = tagName.toLowerCase();
@@ -87,6 +92,7 @@ export class FormularioComponent implements OnInit {
     if (tabla.children.length > 3) {
       const fila = document.getElementById('fila');
       fila.remove();
+      this.totalEntrada -= this.fiesta.precio;
     } else {
       alert('No se pueden borrar mas entradas (minimo una).');
     }

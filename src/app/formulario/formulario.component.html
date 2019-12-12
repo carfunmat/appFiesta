@@ -44,12 +44,12 @@
               </thead>
               <tr id="fila">
                 <td scope="row">{{fiesta.id}}</td>
-                <td>{{fiesta.precio}}</td>
+                <td>{{fiesta.precio}} &euro;</td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRow()">Eliminar</button></td>
               </tr>
               <tr>
                 <th scope="row" colspan="1">Importe total</th>
-                <td>Dinero total de la entrada</td>
+                <td>{{totalEntrada}}</td>
               </tr>
             </table>
             <button type="button" class="btn btn-primary mb-5 mr-2" (click)="addEntrada()">Añadir Entrada</button>

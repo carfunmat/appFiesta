@@ -11,4 +11,5 @@ export interface Fiesta {
     ubicacion: string;
     img: string;
     precio: number;
+    nombre: string;
 }
