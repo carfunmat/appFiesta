@@ -5,14 +5,21 @@
   <app-menu></app-menu>
   <br>
 
+
   <div *ngIf="fiesta" style="overflow: hidden;">
     <div class="text-center align-content-center fondo row">
-      <img src="{{fiesta.img}}" class="imgIzquierda2" height="700" width="550" />
+      <!-- Componente iframe para agregar imágenes incrustadas directamente desde Google Maps -->
+      <!-- En Firebase cada fiesta tendrá el link a su ubicación en Google Maps (el enlace en src) -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.843452185601!2d-6.006820984530044!3d37.41717494042517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126b936aa99ef3%3A0xe0a59b52052890c8!2sEstadio%20La%20Cartuja%20de%20Sevilla!5e0!3m2!1ses!2ses!4v1575285853711!5m2!1ses!2ses"
+              width="600" class="imgIzquierda2 float-left" height="700" width="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+      <img src="{{fiesta.img}}" class="imgIzquierda2" height="700" width="600" />
       <p class="float-left parrafo">{{fiesta.descripcion}}</p>
       <p class="float-left parrafo">{{fiesta.precio}} &euro;</p>
+
+
     </div>
   </div>
-
 
 </body>
 

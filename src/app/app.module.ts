@@ -40,13 +40,35 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot([
+
+      // <!-- Ruta a presentacion -->
       {path: 'presentacion/:id', component: PresentacionComponent},
-      {path: '', component: IndexComponent, pathMatch: 'full'}
+
+      // <!-- Ruta al inicio -->
+      {path: '', component: IndexComponent, pathMatch: 'full'},
+
+      // <!-- Ruta al formulario compra -->
+      {path: 'presentacion/RBF/formulario', component: FormularioComponent},
+      {path: 'presentacion/KP/formulario', component: FormularioComponent},
+      {path: 'presentacion/techno/formulario', component: FormularioComponent},
+      {path: 'presentacion/LIR/formulario', component: FormularioComponent}
+
+      /* <!-- Ruta a los djs -->
+      {path: 'presentacion/RBF/Djs', component: DjsComponent},
+      {path: 'presentacion/KP/Djs', component: DjsComponent},
+      {path: 'presentacion/techno/Djs', component: DjsComponent},
+      {path: 'presentacion/LIR/Djs', component: DjsComponent}, */
+
+      /* <!-- Ruta a la galeria -->
+      {path: 'presentacion/RBF/Djs', component: DjsComponent},
+      {path: 'presentacion/KP/Djs', component: DjsComponent},
+      {path: 'presentacion/techno/Djs', component: DjsComponent},
+      {path: 'presentacion/LIR/Djs', component: DjsComponent}, */
 
     ]),
 
-    //GoogleMapsModule,
-    
+    // GoogleMapsModule,
+
 
   ],
   providers: [AngularFirestore],
