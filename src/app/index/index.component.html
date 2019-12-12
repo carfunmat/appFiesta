@@ -1,4 +1,4 @@
-<body class="fondoColor">
+<!--<body class="fondoColor">
 
   <div class="container">
     <img
@@ -19,6 +19,22 @@
     </div>
 
   </div>
+</body>
+-->
+
+<body class="fondoColor">
+
+<div class="container">
+  <img
+    src="../../assets/IMG/71908747-icône-de-couronne-de-laurier-argent-prix-du-symbole-trophée-victoire-gagnant-prix-branche-d-olivier-el.jpg"
+    class="rounded mx-auto d-block logo" height="200" width="200" />
+</div>
+<div *ngFor="let fiesta of fiestas">
+
+  <img src="{{fiesta[1].img}}" routerLink="presentacion/{{fiesta[0]}}" class="rounded float-left imgIzquierda" height="477" width="400"/>
+
+
+</div>
 
 
 
