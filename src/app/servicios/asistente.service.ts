@@ -10,7 +10,7 @@ export class AsistenteService {
   constructor(private firestore: AngularFirestore) { }
 
   public addAsistente(asistente: Asistente) {
-    return this.firestore.collection('asistentes').add(asistente);
+    return this.firestore.collection('asistentes').doc(asistente.dni).set(asistente);
   }
 
   public getAsistente(documentId: string) {

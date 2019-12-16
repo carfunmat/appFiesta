@@ -12,7 +12,7 @@ export class CompraService {
   private variable: FormControl;
   constructor(private formBuilder: FormBuilder) {
     this.variable = new FormControl('', [Validators.required]);
-    this.compra = formBuilder.group({variable: this.variable});
+    this.compra = formBuilder.group({ variable: this.variable });
   }
 
   comprarEntrada() {
@@ -21,28 +21,32 @@ export class CompraService {
       apellidos: new FormControl(''),
       dni: new FormControl(''),
       direccion: new FormControl(''),
-      telefono: new FormControl('')
+      telefono: new FormControl(''),
+      email: new FormControl(''),
     })
-  let asistente = {
-        nombre: this.compra.get('nombre').value,
-        apellidos: this.compra.get('apellidos').value,
-        dni: this.compra.get('dni').value,
-        direccion: this.compra.get('direccion').value,
-        telefono: this.compra.get('telefono').value,
-        email: this.compra.get('email').value
-      }
+    let asistente = {
+      nombre: this.compra.get('nombre').value,
+      apellidos: this.compra.get('apellidos').value,
+      dni: this.compra.get('dni').value,
+      direccion: this.compra.get('direccion').value,
+      telefono: this.compra.get('telefono').value,
+      email: this.compra.get('email').value
+    }
+    console.log(asistente);
 
-      sessionStorage.setItem("nombre", this.asistente.nombre);
-      sessionStorage.setItem("apellidos", this.asistente.apellidos);
-      sessionStorage.setItem("dni", this.asistente.dni);
-      sessionStorage.setItem("nombre", this.asistente.nombre);
-      sessionStorage.setItem("nombre", this.asistente.nombre);
-      sessionStorage.setItem("nombre", this.asistente.nombre);
-
+    /*
+    sessionStorage.setItem("nombre", this.asistente.nombre);
+    sessionStorage.setItem("apellidos", this.asistente.apellidos);
+    sessionStorage.setItem("dni", this.asistente.dni);
+    sessionStorage.setItem("nombre", this.asistente.nombre);
+    sessionStorage.setItem("nombre", this.asistente.nombre);
+    sessionStorage.setItem("nombre", this.asistente.nombre);
+*/
+// return asistente;
   }
 
 
-  getAsistente(){
+  getAsistente() {
     return this.asistente;
   }
 
