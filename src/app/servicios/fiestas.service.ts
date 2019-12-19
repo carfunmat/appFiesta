@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, DocumentReference, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Asistente } from '../interfaces/asistente';
 import { Fiesta } from '../interfaces/fiesta';
 
@@ -21,6 +21,10 @@ export class FiestasService {
     return this.firestore.collection('fiestas').doc(documentId).snapshotChanges();
 
   } 
+
+  public addAsistenteFiesta(asistente: Asistente, documentId: string){
+    this.firestore.collection('fiestas').doc(documentId).collection('publico').snapshotChanges().subscribe(); 
+  }
 
   public getAsistentes(documentId: string) {
     let fiestaDoc = this.firestore.collection<Fiesta>('fiestas').doc(documentId);

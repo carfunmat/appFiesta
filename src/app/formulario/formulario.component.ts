@@ -14,7 +14,7 @@ import { AsistenteService } from '../servicios/asistente.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
- 
+
 
   variableAsistente: Asistente;
   publico = [];
@@ -36,7 +36,7 @@ export class FormularioComponent implements OnInit {
   }
 
   private selectedLink = 'Credito';
- 
+
 
   ngOnInit() {
     //console.log(this.totalEntrada);
@@ -113,37 +113,37 @@ export class FormularioComponent implements OnInit {
     if (tabla.children.length > 3) {
       const fila = document.getElementById('fila');
       fila.remove();
-      this.totalEntrada -= this.precio;
+      this.totalEntrada = this.totalEntrada - this.fiesta.precio;
     } else {
       alert('No se pueden borrar mas entradas (minimo una).');
     }
   }
 
   comprarEntrada() {
-      this.variableAsistente = {
-        nombre: this.compra.get('nombre').value,
-        apellidos: this.compra.get('apellidos').value,
-        dni: this.compra.get('dni').value,
-        direccion: this.compra.get('direccion').value,
-        telefono: this.compra.get('telefono').value,
-        email: this.compra.get('email').value
-      }
-      console.log(this.variableAsistente);
+    this.variableAsistente = {
+      nombre: this.compra.get('nombre').value,
+      apellidos: this.compra.get('apellidos').value,
+      dni: this.compra.get('dni').value,
+      direccion: this.compra.get('direccion').value,
+      telefono: this.compra.get('telefono').value,
+      email: this.compra.get('email').value
+    }
+    console.log(this.variableAsistente);
 
     //this.compraService.comprarEntrada();
     //let asistente = this.compraService.getAsistente();
-    this.asistentesService.addAsistente(this.variableAsistente);
+    let ref = this.asistentesService.addAsistente(this.variableAsistente);
     // this.fiestaSrvce.addAsistente(asistente);
     const id = this.route.snapshot.paramMap.get('id');
-    let asistentes = this.fiestasService.getAsistentes(id);
-    asistentes.subscribe((publicoSnapShot) => {
-      this.publico = [];
-      publicoSnapShot.forEach(() => {
-        this.publico.push(this.variableAsistente);
-        console.log("Persona añadida");
-      })
-    }
-,);
+    this.fiestasService.addAsistenteFiesta(this.variableAsistente,id);
+    console.log("Persona añadida");
   }
 
+  /*
+   let asistentes = this.fiestasService.getAsistentes(id);
+   asistentes.subscribe((publicoSnapShot) => {
+     publicoSnapShot.push(this.variableAsistente);
+       console.log("Persona añadida");
+     })
+   }*/
 }
