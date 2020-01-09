@@ -1,42 +1,39 @@
-.imgIzquierda2{
-  padding: 5%;
-
+.imgIzquierda2 {
+    padding: 5%;
 }
 
-.parrafo{
-  color: white;
-  padding: 5%;
-  text-align: justify;
-
+.parrafo {
+    color: white;
+    padding: 5%;
+    text-align: justify;
 }
 
-.fondo{
-  background-color: black;
-
+.fondo {
+    background-color: black;
 }
 
-.imgDerecha{
-  margin-right: 10%;
-  margin-top: 2%;
-  margin-bottom: 4%;
-  cursor: pointer;
+.imgDerecha {
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    cursor: pointer;
 }
 
 .listado {
-  margin-left: 15px;
-  text-align: left;
-  color: coral;
+    margin-left: 15px;
+    text-align: left;
+    color: coral;
 }
 
 .tituloListado {
-  color: white;
+    color: white;
 }
 
-.botonAsistentes{
-  height: 15%;
-  width: 15%;
+.botonAsistentes {
+    height: 15%;
+    width: 15%;
+}
 
 .botones {
-  margin-left: 15px;
-
+    margin-left: 15px;
 }
