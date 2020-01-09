@@ -1,27 +1,35 @@
 28/11
 
-Raúl: añadido botón para añadir entradas en formulario de compra
-Tomás: Creada presentación de fiesta individual y creado el css
-José Joaquín: Investigación de obtención de datos de firebase
-Carlos: Población de datos en la BD
+Raï¿½l: aï¿½adido botï¿½n para aï¿½adir entradas en formulario de compra
+Tomï¿½s: Creada presentaciï¿½n de fiesta individual y creado el css
+Josï¿½ Joaquï¿½n: Investigaciï¿½n de obtenciï¿½n de datos de firebase
+Carlos: Poblaciï¿½n de datos en la BD
 
 29/11
 
-Intento de integración de los servicios en la aplicación
+Intento de integraciï¿½n de los servicios en la aplicaciï¿½n
 
 2/12
 
-Carlos/José Joaquín: El servicio obtiene los datos de las fiestas de la BD y los presenta en pantalla
-José Joaquín: Servicios integrados en la presentación de la fiesta
-Carlos: Subidas más fiestas a la BD
-Raúl: Formulario, confirmación, typescript de ambos
+Carlos/Josï¿½ Joaquï¿½n: El servicio obtiene los datos de las fiestas de la BD y los presenta en pantalla
+Josï¿½ Joaquï¿½n: Servicios integrados en la presentaciï¿½n de la fiesta
+Carlos: Subidas mï¿½s fiestas a la BD
+Raï¿½l: Formulario, confirmaciï¿½n, typescript de ambos
 
 5/12
 
-Carlos: Población de BD
-José Joaquín: integración de typescript y servicios en Formulario
-Tomás: Routing, CSS de index
-Raúl: Typescript en formulario
+Carlos: Poblaciï¿½n de BD
+Josï¿½ Joaquï¿½n: integraciï¿½n de typescript y servicios en Formulario
+Tomï¿½s: Routing, CSS de index
+Raï¿½l: Typescript en formulario
 
-Problemas con el git en el proyecto de Tomás
+Problemas con el git en el proyecto de Tomï¿½s
 
+12/12
+Raï¿½l: Integraciï¿½n del formulario en la rama master/Problemas con angular/Firebase en su proyecto. Solucionado instalando via npm
+Tomï¿½s/Carlos/Josï¿½ Joaquï¿½n: Se sigue con el problema de git en su proyecto
+
+16/12
+Carlos: Intentar conseguir que el src de un iframe de GoogleMaps funcione
+JosÃ© JoaquÃ­n: Usando un servicio, conseguir insertar un Asistente en la BD con un id personalizado
+RaÃºl: Creado un botÃ³n de volver en el formulario para volver a la pÃ¡gina anterior

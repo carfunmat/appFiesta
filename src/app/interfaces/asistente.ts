@@ -3,6 +3,6 @@ export interface Asistente {
     apellidos: string;
     dni: string;
     direccion: string;
-    telefono: number;
+    telefono?: number;
     email: string;
 }

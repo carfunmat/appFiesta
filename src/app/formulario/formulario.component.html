@@ -26,11 +26,11 @@
         </div>
         <div class="mb-3">
           <label for="telefono">Telefono <span class="text-muted">(Opcional)</span></label>
-          <input type="text" class="form-control" id="telefono">
+          <input type="text" class="form-control" id="telefono" formControlName="telefono">
         </div>
         <div class="mb-3">
           <label for="dni">DNI </label>
-          <input type="text" class="form-control" id="dni">
+          <input type="text" class="form-control" id="dni" formControlName="dni">
         </div>
 
         <hr class="mb-1">
@@ -45,13 +45,13 @@
                 </tr>
               </thead>
               <tr id="fila">
-                <td scope="row">{{fiesta.id}}</td>
-                <td>{{fiesta.precio}}</td>
+                <td scope="row">{{fiesta.nombre}}</td>
+                <td>{{fiesta.precio}}&euro;</td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRow()">Eliminar</button></td>
               </tr>
               <tr>
                 <th scope="row" colspan="1">Importe total</th>
-                <td>Dinero total de la entrada</td>
+                <td style="font-weight: bold;">{{totalEntrada}}&euro;</td>
               </tr>
             </table>
             <button type="button" class="btn btn-primary mb-5 mr-2" (click)="addEntrada()">Añadir Entrada</button>
@@ -130,8 +130,8 @@
         </div>
 
         <hr class="mb-1">
+        <button type="button" class="btn btn-primary"  routerLink="" (click)="comprarEntrada()">Aceptar</button>
 
-        <button type="button" class="btn btn-primary" routerLink="">Aceptar</button>
       </form>
     </div>
   </div>

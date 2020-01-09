@@ -22,6 +22,21 @@
   cursor: pointer;
 }
 
+.listado {
+  margin-left: 15px;
+  text-align: left;
+  color: coral;
+}
+
+.tituloListado {
+  color: white;
+}
+
+.botonAsistentes{
+  height: 15%;
+  width: 15%;
+
 .botones {
   margin-left: 15px;
+
 }

@@ -20,7 +20,6 @@ export class IndexComponent implements OnInit {
   fiestas: Array<[string, Fiesta]> = [];
 
   getFiestas() {
-    let fiesta: [number, Fiesta];
     this.fiestasService.getFiestas().subscribe((fiestaSnapshot) => {
       fiestaSnapshot.forEach((fiestaData: any) => this.fiestas.push(
         [fiestaData.payload.doc.id
