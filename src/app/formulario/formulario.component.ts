@@ -127,7 +127,7 @@ export class FormularioComponent implements OnInit {
       direccion: this.compra.get('direccion').value,
       telefono: this.compra.get('telefono').value,
       email: this.compra.get('email').value
-    }
+    }     
     console.log(this.variableAsistente);
 
     //this.compraService.comprarEntrada();
@@ -135,6 +135,7 @@ export class FormularioComponent implements OnInit {
     let ref = this.asistentesService.addAsistente(this.variableAsistente);
     // this.fiestaSrvce.addAsistente(asistente);
     const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
     this.fiestasService.addAsistenteFiesta(this.variableAsistente,id);
     console.log("Persona añadida");
   }
@@ -146,4 +147,6 @@ export class FormularioComponent implements OnInit {
        console.log("Persona añadida");
      })
    }*/
+
+
 }

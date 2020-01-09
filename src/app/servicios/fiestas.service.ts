@@ -12,7 +12,7 @@ export class FiestasService {
   constructor(private firestore: AngularFirestore) {
 
   }
-// Hola 
+  // Hola 
   public addFiesta(fiesta: Fiesta) {
     return this.firestore.collection('fiestas').add(fiesta);
   }
@@ -20,15 +20,21 @@ export class FiestasService {
   public getFiesta(documentId: string) {
     return this.firestore.collection('fiestas').doc(documentId).snapshotChanges();
 
-  } 
+  }
 
-  public addAsistenteFiesta(asistente: Asistente, documentId: string){
-    this.firestore.collection('fiestas').doc(documentId).collection('publico').snapshotChanges().subscribe(); 
+  public addAsistenteFiesta(asistente: Asistente, documentId: string) {
+    this.firestore.collection('fiestas').doc(documentId).collection('publico').doc(asistente.dni).set(asistente);
+
   }
 
   public getAsistentes(documentId: string) {
-    let fiestaDoc = this.firestore.collection<Fiesta>('fiestas').doc(documentId);
-    return fiestaDoc.collection<Asistente>('publico').valueChanges();
+    let asistentes: any[] = [];
+    this.firestore.collection('fiestas').doc(documentId).collection('publico').snapshotChanges().subscribe((publicoSnapshot) => {
+      publicoSnapshot.forEach((publicoData: any) => asistentes.push(publicoData.payload.doc.data()
+      )
+      )
+    });
+    return asistentes;
   }
 
   public getFiestas() {
