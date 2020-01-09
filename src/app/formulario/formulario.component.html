@@ -2,25 +2,27 @@
   <div class="row">
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3 text-center display-2">Compra de Entrada</h4>
-      <form class="needs-validation" novalidate [formGroup]="compra">
+      <!-- [formGroup]="compra" -->
+      <form class="needs-validation" novalidate >
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" formControlName="nombre" required>
+            <!-- formControlName="nombre" -->
+            <input type="text" class="form-control" id="firstName" placeholder="" name="nombre"><!-- required -->
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Apellidos</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" required formControlName="apellidos">
+            <input type="text" class="form-control" id="lastName" placeholder="" name="apellidos"><!-- required -->
           </div>
         </div>
         <div class="mb-3">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com" formControlName="email">
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
         </div>
         <div class="mb-3">
           <label for="direccion">Dirección</label>
           <input class="form-control" id="direccion" placeholder="Número de casa y nombre de la calle"
-            formControlName="direccion">
+            name="direccion">
         </div>
         <div class="mb-3">
           <label for="telefono">Telefono <span class="text-muted">(Opcional)</span></label>
@@ -128,8 +130,8 @@
         </div>
 
         <hr class="mb-1">
-
         <button type="button" class="btn btn-primary"  routerLink="" (click)="comprarEntrada()">Aceptar</button>
+
       </form>
     </div>
   </div>
