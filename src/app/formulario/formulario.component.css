@@ -1,4 +1,8 @@
-.centrarCaja{
-  position :relative !important;
-  left: 15% !important;
+.centrarCaja {
+    position: relative !important;
+    left: 15% !important;
+}
+
+.botones85 {
+    margin-left: 10px;
 }
